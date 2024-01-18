@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='reset.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='header.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='watermarking.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='media.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='CoreMedia.css') }}" />
       <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='WatermarkingMedia.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='footer.css') }}"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
@@ -28,9 +28,9 @@
 
       <div class="navWrap">
         <a href="/" class="navlink">Home</a>
-        <a href="#" class="navlink underBuild">My Profile</a>
-        <a href="#" class="navlink underBuild">About</a>
-        <a href="#" class="navlink underBuild">Contact us</a>
+        <a href="/profile" class="navlink">My Profile</a>
+        <a href="/about" class="navlink ">About</a>
+        <a href="/contacts" class="navlink">Contact us</a>
       </div>
       <div class="sidebar">
         <div class="dropdown">
@@ -152,7 +152,7 @@
 
             <div class="textField">
               <div class="input-container">
-                <input
+                <input maxlength="40"
                   class="input"
                   type="text"
                   name="wm_text"
@@ -160,7 +160,8 @@
                   placeholder=" "
                 />
                 <div class="cut cut-short"></div>
-                <label class="placeholder" for="wm_text">WM text:</label>
+                <label class="placeholder" for="wm_text">Text:</label>
+                  <span id="symbol_counter">0</span>/40 symbols
               </div>
             </div>
             <button class="submit" type="submit">Encrypt</button>
@@ -230,20 +231,20 @@
         <div class="footerGroup">
           <p class="footerTitle">Pages</p>
           <ul class="navlinkwrap">
-            <li href="/" class="navlink small">Home</li>
-            <li href="#" class="navlink small underBuild">My Profile</li>
-            <li href="#" class="navlink small underBuild">About</li>
-            <li href="#" class="navlink small underBuild">Contact us</li>
+             <li> <a href="/" class="navlink small">Home</a></li>
+            <li> <a href="/profile" class="navlink small ">My Profile</a></li>
+            <li> <a href="/about" class="navlink small ">About</a></li>
+             <li> <a href="/contacts" class="navlink small">Contact us</a></li>
           </ul>
         </div>
 
         <div class="footerGroup">
           <p class="footerTitle">Media</p>
           <ul class="navlinkwrap">
-            <li href="#" class="navlink small">Facebook</li>
-            <li href="https://www.instagram.com/wmarkstudio" class="navlink small">Instagram</li>
-            <li href="#" class="navlink small">YouTube</li>
-            <li href="#" class="navlink small">Twitter</li>
+             <li> <a  href="https://www.facebook.com/profile.php?id=61555144664420" class="navlink small" target="_blank">Facebook</a></li>
+            <li> <a  href="https://www.instagram.com/wmarkstudio" class="navlink small" target="_blank">Instagram</a></li>
+            <li> <a  href="https://www.youtube.com/@WaterMark_Studio" class="navlink small" target="_blank">YouTube</a></li>
+            <li> <a  href="https://twitter.com/" class="navlink small" target="_blank">Twitter</a></li
           </ul>
         </div>
       </div>
